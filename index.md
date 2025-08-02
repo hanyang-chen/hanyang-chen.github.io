@@ -11,8 +11,10 @@ I am a third-year Master's student in the School of Computer Science and Technol
 ## Research Interests
 
 - **Intelligent Transportation Systems:** traffic signal control
-- **Reinforcement Learning:** multi-agent reinforcement learning, sim2real reinforcement learning
+- **Reinforcement Learning:** sim2real reinforcement learning
 - **Generative AI:** diffusion models
+
+I am still exploring my research interests in Large Language Models, autonomous driving, and embodied AI. Glad to discuss with you if you are also interested in these topics!
 
 ## News
 
