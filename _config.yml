@@ -6,15 +6,15 @@ email: hanyangchen@bjtu.edu.cn
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: Hanyang Chen
+keywords: Hanyang Chen (陈晗阳)
 description: This is the personal website of Hanyang Chen.
-canonical: https://lokol5579.github.io/
+canonical: https://hanyang-chen.github.io/
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 google_scholar: https://scholar.google.com/citations?user=_xGaoJ8AAAAJ
 # cv_link: assets/files/curriculum_vitae.pdf
-github_link: https://github.com/lokol5579
+github_link: https://github.com/hanyang-chen
 # linkedin: https://www.linkedin.com/
 # twitter: https://twitter.com/
 
