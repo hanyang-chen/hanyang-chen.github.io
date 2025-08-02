@@ -24,3 +24,7 @@ I am a Master's student in the School of Computer Science and Technology at Beij
 {% include_relative _includes/publications.md %}
 
 {% include_relative _includes/services.md %}
+
+{% include_relative _includes/competitions_rewards.md %}
+
+{% include_relative _includes/activities.md %}
