@@ -6,7 +6,7 @@ main:
     conference: IEEE Transactions on Mobile Computing <strong>(TMC)</strong>, 2025.
     pdf: https://ieeexplore.ieee.org/document/11045885
     code: https://github.com/YangJiangDev/Proactive-XLight
-    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    bibtex: https://scholar.googleusercontent.com/scholar.bib?q=info:Uzyc6TSTtEoJ:scholar.google.com/&output=citation&scisdr=CgLIZgBVEP7Oz02H8L8:AAZF9b8AAAAAaI2B6L8FG_eUkChYVVIWvGvQi5U&scisig=AAZF9b8AAAAAaI2B6NuCxbpy1MIptYLASh5DjAU&scisf=4&ct=citation&cd=-1&hl=zh-CN
     image: ./assets/img/pubs/proactive-xlight.jpg
     notes: Early Access
 
@@ -17,6 +17,6 @@ main:
     pdf: https://arxiv.org/pdf/2410.22938
     code: https://github.com/lokol5579/DiffLight-release
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://scholar.googleusercontent.com/scholar.bib?q=info:yR8QzSGLLcEJ:scholar.google.com/&output=citation&scisdr=CgLIZgBVEP7Oz02HzLU:AAZF9b8AAAAAaI2B1LW92Q5fZydkIyZjzaLVwog&scisig=AAZF9b8AAAAAaI2B1PxLhqrcXvQD8QsXsvN9asU&scisf=4&ct=citation&cd=-1&hl=zh-CN
     notes: Spotlight Paper
     image: ./assets/img/pubs/difflight.jpg

@@ -10,8 +10,9 @@ I am a Master's student in the School of Computer Science and Technology at Beij
 
 ## Research Interests
 
-- **Intelligent Transportation Systems:** traffic signal control, autonomous driving
+- **Intelligent Transportation Systems:** traffic signal control
 - **Reinforcement Learning:** multi-agent reinforcement learning, sim2real reinforcement learning
+- **Generative AI:** diffusion models
 
 ## News
 
