@@ -34,6 +34,44 @@
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
 
+    <style>
+      /* Wrapper container for ClustrMaps */
+      #clustrmaps-wrapper {
+          display: flex;                 /* Use flexbox for centering */
+          justify-content: center;       /* Horizontally center */
+          align-items: center;           /* Vertically center */
+          margin: 0 auto;                /* Keep the container centered */
+          padding: 0;
+          transform-origin: center top;  /* Scale from top center to reduce vertical white space */
+      }
+
+      /* Force the ClustrMaps inner container to auto-adjust height */
+      #clustrmaps-wrapper > div {
+          height: auto !important;   /* Prevent fixed height issues */
+          margin: 0 !important;      /* Remove extra margin */
+          padding: 0 !important;     /* Remove extra padding */
+      }
+
+      /* Default scaling for desktop */
+      #clustrmaps-wrapper {
+          transform: scale(0.5);
+      }
+
+      /* Tablet scaling (width <= 1024px) */
+      @media screen and (max-width: 1024px) {
+          #clustrmaps-wrapper {
+              transform: scale(0.5);
+          }
+      }
+
+      /* Mobile scaling (width <= 600px) */
+      @media screen and (max-width: 600px) {
+          #clustrmaps-wrapper {
+              transform: scale(1.0);
+          }
+      }
+    </style>
+
   </head>
   <body>
     <div class="wrapper">
@@ -100,13 +138,12 @@
 
       <br>
 
-      <!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&cl=ffffff&w=a"></script> -->
-      <div style="text-align: center; transform: scale(0.5); transform-origin: center;">
+      <!-- ClustrMaps wrapper -->
+      <div id="clustrmaps-wrapper">
         <script type='text/javascript' id='clustrmaps'
             src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=tt&d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'>
         </script>
       </div>
-    
     
 
       {% if site.enable_footnote %}
