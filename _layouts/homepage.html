@@ -102,17 +102,29 @@
 
       <!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&cl=ffffff&w=a"></script> -->
       <script>
-        // Determine current theme
-        const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-        // Choose the ClustrMaps script URL
-        const clustrmapsSrc = isDark
-            ? '//cdn.clustrmaps.com/map_v2.js?cl=dadbdf&w=300&t=tt&d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&co=20212b&cmo=3acc3a&cmn=ff5353&ct=dadbdf'
-            : '//cdn.clustrmaps.com/map_v2.js?cl=043361&w=300&t=tt&d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=043361';
-    
-        // Insert the <script> directly while parsing the page
-        document.write(`<script type="text/javascript" src="${clustrmapsSrc}"><\/script>`);
-    </script>
+        (function() {
+            const container = document.getElementById('clustrmaps-container');
+        
+            // Determine current theme
+            const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+            // Choose the ClustrMaps script URL
+            const clustrmapsSrc = isDark
+                ? '//cdn.clustrmaps.com/map_v2.js?cl=dadbdf&w=300&t=tt&d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&co=20212b&cmo=3acc3a&cmn=ff5353&ct=dadbdf'
+                : '//cdn.clustrmaps.com/map_v2.js?cl=043361&w=300&t=tt&d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=043361';
+        
+            // Create the script element
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = clustrmapsSrc;
+        
+            // Use async to prevent parser blocking
+            script.async = true;
+        
+            // Append to container
+            container.appendChild(script);
+        })();
+        </script>
     
 
       {% if site.enable_footnote %}
