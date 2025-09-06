@@ -101,21 +101,23 @@
       <br>
 
       <!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&cl=ffffff&w=a"></script> -->
-      <script>
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.id = 'clustrmaps';
-    
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            // Dark mode script
-            script.src = '//cdn.clustrmaps.com/map_v2.js?cl=dadbdf&w=300&t=tt&d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&co=20212b&cmo=3acc3a&cmn=ff5353&ct=dadbdf';
-          } else {
-            // Light mode script
-            script.src = '//cdn.clustrmaps.com/map_v2.js?cl=043361&w=300&t=tt&d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=043361';
-        }
-    
-        document.body.appendChild(script);
-      </script>
+      <div id="clustrmaps-container">
+        <script>
+          const script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.id = 'clustrmaps';
+      
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              // Dark mode script
+              script.src = '//cdn.clustrmaps.com/map_v2.js?cl=dadbdf&w=300&t=tt&d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&co=20212b&cmo=3acc3a&cmn=ff5353&ct=dadbdf';
+            } else {
+              // Light mode script
+              script.src = '//cdn.clustrmaps.com/map_v2.js?cl=043361&w=300&t=tt&d=uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=043361';
+          }
+      
+          document.body.appendChild(script);
+        </script>
+      </div>
     
 
       {% if site.enable_footnote %}
