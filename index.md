@@ -6,7 +6,7 @@ layout: homepage
 
 I am a third-year Master's student in the School of Computer Science and Technology at Beijing Jiaotong University (BJTU), supervised by Prof. [Shengnan Guo](https://faculty.bjtu.edu.cn/9685/), and co-advised by Prof. [Huaiyu Wan](https://faculty.bjtu.edu.cn/8793/). I received my Bachelor's degree in Computer Science and Technology from Beijing Jiaotong University in 2023.
 
-<font color="red">I am actively looking for a Ph.D. position in reinforcement learning or data mining starting in Fall 2026, appreciate any opportunities!</font>
+<font color="red">I am actively looking for a Ph.D. position in reinforcement learning, large language models or embodied AI starting in Fall 2026, appreciate any opportunities!</font>
 
 ## Research Interests
 
@@ -14,7 +14,7 @@ I am a third-year Master's student in the School of Computer Science and Technol
 - **Reinforcement Learning:** sim2real reinforcement learning
 - **Generative AI:** diffusion models
 
-I am still exploring my research interests in Large Language Models, Autonomous Driving, and Embodied AI. Glad to discuss with you if you are also interested in these topics!
+I am still exploring my research interests in large language models, autonomous driving, and embodied AI. Glad to discuss with you if you are also interested in these topics!
 
 ## News
 

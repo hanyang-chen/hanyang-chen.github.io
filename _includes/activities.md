@@ -2,7 +2,7 @@
 
 <h4 style="margin:0 10px 0;">Teaching Assistant</h4>
 <ul style="margin:0 0 5px;">
-  <li><autocolor>Deep Learning, Beijing Jiaotong University, Fall 2024</autocolor></li>
+  <li><autocolor>Deep Learning, Beijing Jiaotong University, Fall 2024 & Fall 2025</autocolor></li>
 </ul>
 
 <h4 style="margin:0 10px 0;">Research Guidance (College Students' Innovation Project)</h4>
