@@ -18,7 +18,7 @@ I have been working on deployable decision-making policies in two areas: traffic
 
 - **Data-missing traffic signal control with diffusion models (TSC)**
 - **Cross-city traffic signal control by Shapley value enhanced multi-task RL (TSC)**
-- **Cross-domain adaptation for sim-to-real tasks with diffusion models (RL)**
+- **Cross-domain policy adaptation for sim-to-real tasks with diffusion models (RL)**
 
 Towards more generalizable and robust policies, I am exploring the utilization of foundation models (e.g., LLMs, VLMs and VLAs) in decision-making tasks, especially in traffic signal control.
 
