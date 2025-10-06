@@ -6,7 +6,7 @@
   <li><a href="https://sigkg.cn/ccks2025/"><autocolor>China Conference on Knowledge Graph and Semantic Computing (CCKS), 2025</autocolor></a></li>
 </ul>
 
-<!-- <h4 style="margin:0 10px 0;">Journal Reviewers</h4>
+<h4 style="margin:0 10px 0;">Journal Reviewers</h4>
 <ul style="margin:0 0 20px;">
   <li><a href="https://www.sciengine.com/DI/home"><autocolor>Data Intelligence (DI)</autocolor></a></li>
-</ul> -->
+</ul>

@@ -4,17 +4,23 @@ layout: homepage
 
 ## About Me
 
-I am a third-year Master's student in the School of Computer Science and Technology at Beijing Jiaotong University (BJTU), supervised by Prof. [Shengnan Guo](https://faculty.bjtu.edu.cn/9685/), and co-advised by Prof. [Huaiyu Wan](https://faculty.bjtu.edu.cn/8793/). I received my Bachelor's degree in Computer Science and Technology from Beijing Jiaotong University in 2023.
+I am a final-year Master's student at the School of Computer Science and Technology, Beijing Jiaotong University (BJTU), supervised by Prof. [Shengnan Guo](https://faculty.bjtu.edu.cn/9685/) and co-advised by Prof. [Huaiyu Wan](https://faculty.bjtu.edu.cn/8793/). I received my Bachelor's degree in Computer Science and Technology from Beijing Jiaotong University. My main research interests include reinforcement learning, data mining and diffusion models.
 
-<font color="red">I am actively looking for a Ph.D. position in reinforcement learning, large language models or embodied AI starting in Fall 2026, appreciate any opportunities!</font>
+<font color="red">I am actively looking for a Ph.D. position in reinforcement learning, embodied AI or large language models starting in Fall 2026, appreciate any opportunities!</font>
 
-## Research Interests
+## Research
 
-- **Intelligent Transportation Systems:** traffic signal control
-- **Reinforcement Learning:** sim2real reinforcement learning
-- **Generative AI:** diffusion models
+I have been working on deployable decision-making policies in two areas: traffic signal control (TSC) and sim-to-real reinforcement learning (RL).
 
-I am still exploring my research interests in large language models, autonomous driving, and embodied AI. Glad to discuss with you if you are also interested in these topics!
+- **Data-missing traffic signal control with diffusion models (TSC)**
+- **Cross-city traffic signal control by Shapley value enhanced multi-task RL (TSC)**
+- **Cross-domain adaptation for sim-to-real tasks with diffusion models (RL)**
+
+Towards more generalizable and robust policies, I am exploring the utilization of foundation models (e.g., LLMs, VLMs and VLAs) in decision-making tasks, especially in traffic signal control.
+
+I am also working with collaborators on developing traffic scenario world models aimed at data augmentation for traffic signal control and autonomous driving.
+
+<!-- I am still exploring my research interests in large language models, autonomous driving, and embodied AI. Glad to discuss with you if you are also interested in these topics! -->
 
 ## News
 
