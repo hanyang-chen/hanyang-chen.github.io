@@ -20,7 +20,7 @@ I have been working on decision-making policies for real world in two areas: tra
 - **Cross-city traffic signal control by Shapley value enhanced multi-task RL (TSC)**
 - **Cross-domain policy adaptation for sim-to-real tasks with diffusion models (RL)**
 
-Towards more generalizable and robust policies, I am working with collaborators on senario generation for traffic simulation and exploring the utilization of foundation models (e.g., LLMs, VLMs and VLAs) in decision-making tasks.
+Towards more generalizable and robust policies, I am working with collaborators on scenario generation for traffic simulation and exploring the utilization of foundation models (e.g., LLMs, VLMs and VLAs) in decision-making tasks.
 
 <!-- I am still exploring my research interests in large language models, autonomous driving, and embodied AI. Glad to discuss with you if you are also interested in these topics! -->
 
