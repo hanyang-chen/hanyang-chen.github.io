@@ -14,7 +14,7 @@ I am a final-year Master's student at the School of Computer Science and Technol
     <img src="assets/img/roadmap.jpg" alt="Research Roadmap" style="width: 75%; max-width: 1024px;">
 </p>
 
-I have been working on deployable decision-making policies in two areas: traffic signal control (TSC) and sim-to-real reinforcement learning (RL). My research roadmap is shown above.
+I have been working on decision-making policies for real world in two areas: traffic signal control (TSC) and sim-to-real reinforcement learning (RL). My research roadmap is shown above.
 
 - **Data-missing traffic signal control with diffusion models (TSC)**
 - **Cross-city traffic signal control by Shapley value enhanced multi-task RL (TSC)**
