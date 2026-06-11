@@ -121,7 +121,13 @@
 
     window.addEventListener('resize', function() {
       var active = getActiveLink();
-      if (active) moveSliderTo(active);
+      if (active) {
+        var savedTransition = slider.style.transition;
+        slider.style.transition = 'none';
+        moveSliderTo(active);
+        slider.offsetHeight; // force reflow
+        slider.style.transition = savedTransition;
+      }
     });
 
     if (document.fonts) {
@@ -171,6 +177,35 @@
         icon.classList.add('active');
       }
     };
+
+    // Helper: close mobile menu if open
+    function closeMobileMenu() {
+      var x = document.getElementById('myLinks');
+      var icon = document.querySelector('.topnav a.icon');
+      if (!x || !x.classList.contains('open')) return;
+      var currentHeight = x.scrollHeight;
+      x.style.height = currentHeight + 'px';
+      x.offsetHeight; // force reflow
+      requestAnimationFrame(function() {
+        x.style.height = '0px';
+        x.classList.remove('open');
+        if (blur) blur.style.height = '48px';
+      });
+      if (icon) icon.classList.remove('active');
+    }
+
+    // Click outside to close
+    document.addEventListener('click', function(e) {
+      var x = document.getElementById('myLinks');
+      var icon = document.querySelector('.topnav a.icon');
+      if (!x || !x.classList.contains('open')) return;
+      if (x.contains(e.target) || (icon && icon.contains(e.target))) return;
+      closeMobileMenu();
+    });
+
+    // Scroll or swipe to close
+    window.addEventListener('scroll', closeMobileMenu, { passive: true });
+    document.addEventListener('touchmove', closeMobileMenu, { passive: true });
 
     // Clean up inline height after transition completes
     if (myLinks) {
@@ -231,6 +266,8 @@
       }
 
       var currentPath = window.location.pathname;
+      var bestMatch = null;
+      var bestMatchLength = 0;
       for (var i = 0; i < links.length; i++) {
         var href = links[i].getAttribute('href');
         if (!href) continue;
@@ -238,15 +275,25 @@
         var cleanHref = absUrl.replace(/\/$/, '') || '/';
         var cleanPath = currentPath.replace(/\/$/, '') || '/';
         if (cleanPath === cleanHref) {
-          var parentRect = topnav.getBoundingClientRect();
-          var rect = links[i].getBoundingClientRect();
-          slider.style.transform = 'translateX(' + (rect.left - parentRect.left) + 'px)';
-          slider.style.width = rect.width + 'px';
-          slider.style.opacity = '1';
-          clearAllActive();
-          links[i].classList.add('slider-active');
+          bestMatch = links[i];
+          bestMatchLength = Infinity;
           break;
         }
+        if (cleanHref !== '/' && cleanPath.indexOf(cleanHref + '/') === 0) {
+          if (cleanHref.length > bestMatchLength) {
+            bestMatch = links[i];
+            bestMatchLength = cleanHref.length;
+          }
+        }
+      }
+      if (bestMatch) {
+        var parentRect = topnav.getBoundingClientRect();
+        var rect = bestMatch.getBoundingClientRect();
+        slider.style.transform = 'translateX(' + (rect.left - parentRect.left) + 'px)';
+        slider.style.width = rect.width + 'px';
+        slider.style.opacity = '1';
+        clearAllActive();
+        bestMatch.classList.add('slider-active');
       }
     }
 
