@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Hello World"
+date: 2026-06-11
+---
+
+This is my first blog post. Welcome to my personal blog!
+
+I will share my research insights, learning notes, and thoughts on reinforcement learning, data mining, and large language models here. Stay tuned for more updates.

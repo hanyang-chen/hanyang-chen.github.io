@@ -1,0 +1,50 @@
+education:
+  - degree: "M.S. in Computer Science and Technology"
+    school: "Beijing Jiaotong University"
+    location: "Beijing, China"
+    time: "Sep. 2023 – Jun. 2026"
+    advisor: "Shengnan Guo and Huaiyu Wan"
+
+  - degree: "B.S. in Computer Science and Technology"
+    school: "Beijing Jiaotong University"
+    location: "Beijing, China"
+    time: "Sep. 2019 – Jun. 2023"
+
+awards:
+  - name: "Outstanding Graduate Students of Beijing Jiaotong University"
+    org: "Beijing Jiaotong University"
+    year: "2026"
+
+  - name: "The First Prize Academic Scholarship"
+    org: "Beijing Jiaotong University"
+    year: "2024, 2025"
+
+  - name: "National Scholarship"
+    org: "Beijing Jiaotong University"
+    year: "2024"
+
+  - name: "NeurIPS 2024 Scholar Award"
+    org: "NeurIPS Committee"
+    year: "2024"
+
+  - name: "Outstanding Graduate Students of Beijing"
+    org: "Beijing Jiaotong University"
+    year: "2023"
+
+patents:
+  - title: "A Traffic Signal Control Method Based on DRL and Situation Prediction"
+    number: "CN202410357941.4"
+    inventors: "Huaiyu Wan, Shengnan Guo, Yang Jiang, <strong>Hanyang Chen</strong>, Jingwen Chen, Youfang Lin"
+
+competitions:
+  - name: "National E-Commerce Challenge Competition for College Students"
+    award: "Provincial 1st Prize"
+    time: "Jun. 2025"
+
+  - name: "National College Student Computer System Capability Competition"
+    award: "National 3rd Prize"
+    time: "Aug. 2022"
+
+  - name: "MathorCup Mathematical Modeling Challenge"
+    award: "National 2nd Prize"
+    time: "Jun. 2022"

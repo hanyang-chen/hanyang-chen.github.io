@@ -1,12 +1,31 @@
-## Services
+<h2 style="margin: 60px 0px 10px;">Services</h2>
 
-<h4 style="margin:0 10px 0;">Conference Reviewers</h4>
-<ul style="margin:0 0 5px;">
-  <li><a href="https://nips.cc/Conferences/2025/"><autocolor>Annual Conference on Neural Information Processing Systems (NeurIPS), 2025</autocolor></a></li>
-  <li><a href="https://sigkg.cn/ccks2025/"><autocolor>China Conference on Knowledge Graph and Semantic Computing (CCKS), 2025</autocolor></a></li>
-</ul>
+<div class="cv-section">
+  <div class="cv-section-title">Conference Reviewer</div>
+  <ul class="cv-list">
+  {% for reviewer in site.data.services.reviewers %}
+    <li class="cv-item">
+      <div class="cv-item-left">
+        <div class="cv-item-title">
+          <a href="{{ reviewer.url }}">{{ reviewer.name }}</a>
+        </div>
+      </div>
+      <div class="cv-item-right">{{ reviewer.year }}</div>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
 
-<h4 style="margin:0 10px 0;">Journal Reviewers</h4>
-<ul style="margin:0 0 20px;">
-  <li><a href="https://www.sciengine.com/DI/home"><autocolor>Data Intelligence (DI)</autocolor></a></li>
-</ul>
+<div class="cv-section">
+  <div class="cv-section-title">Teaching Assistant</div>
+  <ul class="cv-list">
+  {% for t in site.data.services.teaching %}
+    <li class="cv-item">
+      <div class="cv-item-left">
+        <div class="cv-item-title">{{ t.course }}</div>
+      </div>
+      <div class="cv-item-right">{{ t.semesters }}</div>
+    </li>
+  {% endfor %}
+  </ul>
+</div>

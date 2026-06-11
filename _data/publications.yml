@@ -1,22 +1,63 @@
 main:
+  - title: "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning"
+    authors: <strong>Hanyang Chen</strong>, Anirudh Satheesh, Longchao Da, Hua Wei
+    conference_short: IROS 2026
+    conference: IEEE/RSJ International Conference on Intelligent Robots and Systems <strong>(IROS)</strong>, 2026.
+    # pdf: https://www.alphaxiv.org/abs/2605.28603
+    # code: https://github.com/HaonanWen/Under-Cali
+    image: ../assets/pub/img/dadiff.jpg
+
+  - title: "Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration"
+    authors: Haonan Wen, <strong>Hanyang Chen</strong>, Songhe Feng
+    conference_short: KDD 2026
+    conference: ACM SIGKDD Conference on Knowledge Discovery and Data Mining <strong>(KDD)</strong>, 2026.
+    pdf: https://www.alphaxiv.org/abs/2605.28603
+    code: https://github.com/HaonanWen/Under-Cali
+    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: |
+      @misc{wen2026undercali,
+        title={Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration}, 
+        author={Haonan Wen and Hanyang Chen and Songhe Feng},
+        year={2026},
+        eprint={2605.28603},
+        archivePrefix={arXiv},
+        primaryClass={cs.LG},
+        url={https://arxiv.org/abs/2605.28603}, 
+      }
+    image: ../assets/pub/img/under-cali.jpg
 
   - title: "Proactive-XLight: Proactive Traffic Signal Control with Pluggable and Reliable Traffic Prediction"
     authors: Yang Jiang, Shengnan Guo, <strong>Hanyang Chen</strong>, Xiaowei Mao, Youfang Lin, Huaiyu Wan
-    conference_short: TMC
+    conference_short: IEEE TMC
     conference: IEEE Transactions on Mobile Computing <strong>(TMC)</strong>, 2025.
     pdf: https://ieeexplore.ieee.org/document/11045885
     code: https://github.com/YangJiangDev/Proactive-XLight
-    # bibtex: ./_data/bibs/proactive-xlight.bib
-    image: ./assets/img/pubs/proactive-xlight.jpg
-    notes: Early Access
+    bibtex: |
+      @article{jiang2025proactive,
+        title={Proactive-XLight: Proactive Traffic Signal Control with Pluggable and Reliable Traffic Prediction},
+        author={Jiang, Yang and Guo, Shengnan and Chen, Hanyang and Mao, Xiaowei and Lin, Youfang and Wan, Huaiyu},
+        journal={IEEE Transactions on Mobile Computing},
+        year={2025},
+        publisher={IEEE}
+      }
+    image: ../assets/pub/img/proactive-xlight.jpg
+    # notes: Early Access
 
   - title: "DiffLight: A Partial Rewards Conditioned Diffusion Model for Traffic Signal Control with Missing Data"
     authors: <strong>Hanyang Chen</strong>, Yang Jiang, Shengnan Guo, Xiaowei Mao, Youfang Lin, Huaiyu Wan
-    conference_short: NeurIPS
+    conference_short: NeurIPS 2024
     conference: Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2024.
-    pdf: https://arxiv.org/pdf/2410.22938
+    pdf: https://proceedings.neurips.cc/paper_files/paper/2024/hash/df20e06b04dfc499a1a698796abb0856-Abstract-Conference.html
     code: https://github.com/lokol5579/DiffLight-release
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # bibtex: ./_data/bibs/difflight.bib
+    bibtex: |
+      @article{chen2024difflight,
+        title={Difflight: a partial rewards conditioned diffusion model for traffic signal control with missing data},
+        author={Chen, Hanyang and Jiang, Yang and Guo, Shengnan and Mao, Xiaowei and Lin, Youfang and Wan, Huaiyu},
+        journal={Advances in Neural Information Processing Systems},
+        volume={37},
+        pages={123353--123378},
+        year={2024}
+      }
     notes: Spotlight Paper
-    image: ./assets/img/pubs/difflight.jpg
+    image: ../assets/pub/img/difflight.jpg

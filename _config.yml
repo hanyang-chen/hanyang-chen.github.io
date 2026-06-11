@@ -1,58 +1,51 @@
 # Basic Information 
 title: Hanyang Chen
-subtitle: 陈晗阳
-position: MS Student
-affiliation: Beijing Jiaotong University
-email: hanyangchen@bjtu.edu.cn
+subtitle: （陈晗阳）
+position: Incoming Ph.D. Student
+# affiliation: Arizona State University
+# affiliation_link: https://www.asu.edu/
+# affiliation_logo: ./assets/img/illinois.svg
+email: hanyang-chen [at] outlook.com
 
 # Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: Hanyang Chen (陈晗阳)
-description: This is the personal website of Hanyang Chen.
+keywords: hanyang chen, chen hanyang, hanyangchen, chenhanyang, 陈晗阳
 canonical: https://hanyang-chen.github.io/
+description: Hanyang Chen is an incoming Ph.D. student at the Arizona State University. His research lies in reinforcement learning, data mining, and large language models.
 
-# Links 
-# If you don't need one of them, you may delete the corresponding line.
+# The option is used to enable the Illinois template.
+enable_hopkins_logo: false
+
+# The option is used to show the last update time.
+enable_last_update: true
+
+# Links
+link_type: icon #text/icon
 google_scholar: https://scholar.google.com/citations?user=_xGaoJ8AAAAJ
+github_link: https://hanyang-chen.github.io/
 cv_link: assets/files/cv.pdf
 github_link: https://github.com/hanyang-chen
-# linkedin: https://www.linkedin.com/
-# twitter: https://twitter.com/
+linkedin: https://www.linkedin.com/in/hanyang-chen-lokol/
+# twitter: https://twitter.com/YaoyaoLiu1/
 
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
+# Images 
 avatar: ./assets/img/life.jpg
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
 
-# Footnote
-# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
-enable_footnote: true
+# Footnotes
+footnote: Powered by Jekyll and Minimal Light theme.
+footnote_link: https://github.com/yaoyao-liu/minimal-light
 
-# Auto Dark Mode
-# You may use the option to disable the automatic dark theme
-auto_dark_mode: true
+# Analytics
+# Please remove the following lines about analytics services if you fork my project. 
+# Otherwise, the analytics information of your website will be recorded to my ClustrMaps accounts.
+clustrmaps_id: uMIO01ueSitrFq3z7QUTj1z2cxswlDeOfXg5pKXwxbs
 
-# Font
-# You can use this option to choose between Serif or Sans Serif fonts.
-font: "Serif" # or "Sans Serif"
-
-# Google Analytics ID
-# Please remove this if you don't use Google Analytics
-# google_analytics: G-HGY04MME0D
-
-# Use this project as a remote theme for GitHub Pages
-# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
-remote_theme: yaoyao-liu/minimal-light
+permalink: /blogs/:title/
 
 # The following files will be removed from the generated website.
 exclude:
+  - build.sh
   - Gemfile
   - Gemfile.lock
   - README.md
-  - README_zh_Hans.md
-  - README_zh_Hant.md
-  - README_de.md
   - LICENSE
-  - minimal-light.gemspec
-  - html_source_file/
+  - CNAME

@@ -1,0 +1,210 @@
+/* ============================================================
+   Top Navigation — Unified blur via #mobileNavBlur
+   ============================================================ */
+
+/* Topnav is transparent; blur + tint handled by #mobileNavBlur */
+.topnav {
+  font-family: 'Source Sans 3', sans-serif;
+  overflow: hidden;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  min-height: 48px;
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Independent blur layer (injected by JS, works on all viewports) */
+#mobileNavBlur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 997;
+  transition: height 0.35s ease-in-out;
+  pointer-events: none;
+}
+
+.topnav #myLinks {
+  display: inline;
+}
+
+/* Sliding hover indicator */
+.nav-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #13294B;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s ease;
+  z-index: 0;
+}
+
+.topnav:hover .nav-slider {
+  opacity: 1;
+}
+
+/* Hamburger icon hidden on desktop */
+.topnav a.icon {
+  display: none;
+}
+
+/* Logo image */
+.topnav img {
+  margin-bottom: 0;
+  margin-top: 10pt;
+  margin-left: 30%;
+}
+
+/* Navigation links */
+.topnav a.normal,
+.topnav a.right {
+  float: right;
+  color: #13294B;
+  font-family: inherit;
+  text-align: center;
+  padding: 10px 22px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: color 0.25s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.topnav a.normal:hover,
+.topnav a.normal.slider-active {
+  color: #fff;
+}
+
+.topnav a.right {
+  margin-right: 30%;
+}
+
+/* Responsive margin breakpoints for logo & right link */
+@media print, screen and (max-width: 1000px) {
+  .topnav img      { margin-left: 3%; }
+  .topnav a.right  { margin-right: 3%; }
+  .topnav a.normal { padding: 10px 5px; }
+}
+
+@media print, screen and (max-width: 1200px) and (min-width: 1001px) {
+  .topnav img      { margin-left: 6%; }
+  .topnav a.right  { margin-right: 6%; }
+}
+
+@media print, screen and (max-width: 1400px) and (min-width: 1201px) {
+  .topnav img      { margin-left: 12%; }
+  .topnav a.right  { margin-right: 12%; }
+}
+
+@media print, screen and (max-width: 1600px) and (min-width: 1401px) {
+  .topnav img      { margin-left: 16%; }
+  .topnav a.right  { margin-right: 16%; }
+}
+
+@media print, screen and (max-width: 1800px) and (min-width: 1601px) {
+  .topnav img      { margin-left: 19%; }
+  .topnav a.right  { margin-right: 19%; }
+}
+
+@media print, screen and (max-width: 2000px) and (min-width: 1801px) {
+  .topnav img      { margin-left: 22%; }
+  .topnav a.right  { margin-right: 22%; }
+}
+
+/* ============================================================
+   Mobile breakpoint (max-width: 960px)
+   ============================================================ */
+@media print, screen and (max-width: 960px) {
+
+  .topnav {
+    overflow: visible;
+  }
+
+  .nav-slider {
+    display: none !important;
+  }
+
+  /* Dropdown menu — use height transition for sync with blur layer */
+  .topnav #myLinks {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease-in-out;
+    z-index: 998;
+  }
+
+  /* Mobile nav links */
+  .topnav a.normal,
+  .topnav a.right {
+    color: #13294B;
+    font-family: inherit;
+    float: none;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-right: 0;
+  }
+
+  .topnav a.normal:hover,
+  .topnav a.normal.slider-active {
+    background-color: #13294B;
+    color: #fff;
+  }
+
+  /* Hamburger icon */
+  .topnav a.icon {
+    color: #13294B;
+    font-family: inherit;
+    height: 48px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 5%;
+    z-index: 2;
+  }
+
+  .topnav a.icon .icon-wrap {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+
+  .topnav a.icon .icon-bars,
+  .topnav a.icon .icon-xmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .topnav a.icon .icon-bars   { opacity: 1; transform: rotate(0deg); }
+  .topnav a.icon .icon-xmark  { opacity: 0; transform: rotate(-90deg); }
+
+  .topnav a.icon.active .icon-bars   { opacity: 0; transform: rotate(90deg); }
+  .topnav a.icon.active .icon-xmark  { opacity: 1; transform: rotate(0deg); }
+}

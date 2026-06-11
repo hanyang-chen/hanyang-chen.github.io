@@ -1,0 +1,16 @@
+main:
+  - title: "Blogs"
+    url: blogs/
+    right: true
+
+  - title: "Services"
+    url: services/
+
+  - title: "CV"
+    url: cv/
+
+  - title: "Publications"
+    url: publications/
+
+  - title: "Home"
+    url:
