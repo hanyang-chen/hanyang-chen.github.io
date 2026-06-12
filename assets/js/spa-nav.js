@@ -244,10 +244,21 @@
     function updateSpinnerPosition() {
       if (!spinner || !section) return;
       var rect = section.getBoundingClientRect();
-      spinner.style.top = rect.top + 'px';
-      spinner.style.left = rect.left + 'px';
-      spinner.style.width = rect.width + 'px';
-      spinner.style.height = rect.height + 'px';
+      var viewHeight = window.innerHeight;
+      var viewWidth = window.innerWidth;
+
+      var top = Math.max(rect.top, 0);
+      var left = Math.max(rect.left, 0);
+      var bottom = Math.min(rect.bottom, viewHeight);
+      var right = Math.min(rect.right, viewWidth);
+
+      var width = Math.max(right - left, 0);
+      var height = Math.max(bottom - top, 0);
+
+      spinner.style.top = top + 'px';
+      spinner.style.left = left + 'px';
+      spinner.style.width = width + 'px';
+      spinner.style.height = height + 'px';
     }
 
     function onSpinnerResize() {
@@ -268,7 +279,7 @@
         window.addEventListener('resize', onSpinnerResize, { passive: true });
         window.addEventListener('scroll', onSpinnerScroll, { passive: true });
         spinnerShowTimer = null;
-      }, 500);
+      }, 1000);
     }
 
     function hideSpinner() {
