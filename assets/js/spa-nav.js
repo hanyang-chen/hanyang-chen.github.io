@@ -224,8 +224,40 @@
     if (!window.fetch) return;
 
     var isNavigating = false;
+    var currentController = null;
+    var navSequence = 0;
+    var spinnerShowTimer = null;
     var section = document.querySelector('section');
     if (!section) return;
+
+    var spinner = document.getElementById('page-spinner');
+    if (!spinner) {
+      spinner = document.createElement('div');
+      spinner.id = 'page-spinner';
+      spinner.setAttribute('aria-hidden', 'true');
+      var ring = document.createElement('div');
+      ring.className = 'spinner-ring';
+      spinner.appendChild(ring);
+      document.body.appendChild(spinner);
+    }
+
+    function showSpinner() {
+      if (spinnerShowTimer) {
+        clearTimeout(spinnerShowTimer);
+      }
+      spinnerShowTimer = setTimeout(function() {
+        spinner.classList.add('visible');
+        spinnerShowTimer = null;
+      }, 150);
+    }
+
+    function hideSpinner() {
+      if (spinnerShowTimer) {
+        clearTimeout(spinnerShowTimer);
+        spinnerShowTimer = null;
+      }
+      spinner.classList.remove('visible');
+    }
 
     function shouldInterceptLink(href) {
       if (!href) return false;
@@ -252,20 +284,8 @@
       };
     }
 
-    function updateActiveNav() {
-      var topnav = document.querySelector('.topnav');
-      if (!topnav) return;
-      var slider = topnav.querySelector('.nav-slider');
-      if (!slider) return;
-      var links = topnav.querySelectorAll('#myLinks a.normal, #myLinks a.right');
-
-      function clearAllActive() {
-        for (var i = 0; i < links.length; i++) {
-          links[i].classList.remove('slider-active');
-        }
-      }
-
-      var currentPath = window.location.pathname;
+    function findBestMatchLink(pathname, links) {
+      var cleanPath = pathname.replace(/\/$/, '') || '/';
       var bestMatch = null;
       var bestMatchLength = 0;
       for (var i = 0; i < links.length; i++) {
@@ -273,11 +293,8 @@
         if (!href) continue;
         var absUrl = new URL(href, window.location.href).pathname;
         var cleanHref = absUrl.replace(/\/$/, '') || '/';
-        var cleanPath = currentPath.replace(/\/$/, '') || '/';
         if (cleanPath === cleanHref) {
-          bestMatch = links[i];
-          bestMatchLength = Infinity;
-          break;
+          return links[i];
         }
         if (cleanHref !== '/' && cleanPath.indexOf(cleanHref + '/') === 0) {
           if (cleanHref.length > bestMatchLength) {
@@ -286,15 +303,31 @@
           }
         }
       }
+      return bestMatch;
+    }
+
+    function updateActiveNavForPath(pathname) {
+      var topnav = document.querySelector('.topnav');
+      if (!topnav) return;
+      var slider = topnav.querySelector('.nav-slider');
+      if (!slider) return;
+      var links = topnav.querySelectorAll('#myLinks a.normal, #myLinks a.right');
+      var bestMatch = findBestMatchLink(pathname, links);
       if (bestMatch) {
         var parentRect = topnav.getBoundingClientRect();
         var rect = bestMatch.getBoundingClientRect();
         slider.style.transform = 'translateX(' + (rect.left - parentRect.left) + 'px)';
         slider.style.width = rect.width + 'px';
         slider.style.opacity = '1';
-        clearAllActive();
+        for (var i = 0; i < links.length; i++) {
+          links[i].classList.remove('slider-active');
+        }
         bestMatch.classList.add('slider-active');
       }
+    }
+
+    function updateActiveNav() {
+      updateActiveNavForPath(window.location.pathname);
     }
 
     function updateLastModifiedDate() {
@@ -306,26 +339,47 @@
     }
 
     function navigateTo(href, pushHistory) {
-      if (isNavigating) return;
-      isNavigating = true;
-
       var absUrl = new URL(href, window.location.href).href;
       var currentUrl = window.location.href;
 
       if (absUrl === currentUrl) {
-        isNavigating = false;
         return;
       }
 
+      // Abort any in-flight navigation so the latest click wins
+      if (window.AbortController && currentController) {
+        currentController.abort();
+      }
+      currentController = window.AbortController ? new AbortController() : null;
+      navSequence++;
+      var mySeq = navSequence;
+
+      isNavigating = true;
+
+      // Update navigation bar to the target page immediately
+      updateActiveNavForPath(new URL(href, window.location.href).pathname);
+
+      // Fade out current content and show spinner if loading lingers
       section.style.transition = 'opacity 0.15s ease';
       section.style.opacity = '0';
+      showSpinner();
 
-      fetch(href, { headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+      var fetchOptions = {
+        headers: { 'X-Requested-With': 'XMLHttpRequest' }
+      };
+      if (currentController) {
+        fetchOptions.signal = currentController.signal;
+      }
+
+      fetch(href, fetchOptions)
         .then(function(response) {
+          if (mySeq !== navSequence) return null;
           if (!response.ok) throw new Error('HTTP ' + response.status);
           return response.text();
         })
         .then(function(html) {
+          if (mySeq !== navSequence) return;
+          if (!html) return;
           var result = extractContent(html);
           if (!result) {
             window.location.href = href;
@@ -333,6 +387,7 @@
           }
 
           setTimeout(function() {
+            if (mySeq !== navSequence) return;
             section.innerHTML = result.html;
             document.title = result.title;
             section.style.opacity = '1';
@@ -345,10 +400,17 @@
             updateLastModifiedDate();
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
+            hideSpinner();
             isNavigating = false;
+            currentController = null;
           }, 150);
         })
-        .catch(function() {
+        .catch(function(err) {
+          if (err && err.name === 'AbortError') return;
+          if (mySeq !== navSequence) return;
+          hideSpinner();
+          isNavigating = false;
+          currentController = null;
           window.location.href = href;
         });
     }
