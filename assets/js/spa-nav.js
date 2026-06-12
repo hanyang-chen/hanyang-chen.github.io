@@ -241,14 +241,34 @@
       document.body.appendChild(spinner);
     }
 
+    function updateSpinnerPosition() {
+      if (!spinner || !section) return;
+      var rect = section.getBoundingClientRect();
+      spinner.style.top = rect.top + 'px';
+      spinner.style.left = rect.left + 'px';
+      spinner.style.width = rect.width + 'px';
+      spinner.style.height = rect.height + 'px';
+    }
+
+    function onSpinnerResize() {
+      updateSpinnerPosition();
+    }
+
+    function onSpinnerScroll() {
+      updateSpinnerPosition();
+    }
+
     function showSpinner() {
       if (spinnerShowTimer) {
         clearTimeout(spinnerShowTimer);
       }
       spinnerShowTimer = setTimeout(function() {
+        updateSpinnerPosition();
         spinner.classList.add('visible');
+        window.addEventListener('resize', onSpinnerResize, { passive: true });
+        window.addEventListener('scroll', onSpinnerScroll, { passive: true });
         spinnerShowTimer = null;
-      }, 150);
+      }, 500);
     }
 
     function hideSpinner() {
@@ -257,6 +277,8 @@
         spinnerShowTimer = null;
       }
       spinner.classList.remove('visible');
+      window.removeEventListener('resize', onSpinnerResize);
+      window.removeEventListener('scroll', onSpinnerScroll);
     }
 
     function shouldInterceptLink(href) {
