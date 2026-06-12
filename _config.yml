@@ -4,16 +4,12 @@ subtitle: （陈晗阳）
 position: Incoming Ph.D. Student
 # affiliation: Arizona State University
 # affiliation_link: https://www.asu.edu/
-# affiliation_logo: ./assets/img/illinois.svg
 email: hanyang-chen [at] outlook.com
 
 # Search Engine Optimization (SEO)
 keywords: hanyang chen, chen hanyang, hanyangchen, chenhanyang, 陈晗阳
 canonical: https://hanyang-chen.github.io/
 description: Hanyang Chen is an incoming Ph.D. student at the Arizona State University. His research lies in reinforcement learning, data mining, and large language models.
-
-# The option is used to enable the Illinois template.
-enable_hopkins_logo: false
 
 # The option is used to show the last update time.
 enable_last_update: true
