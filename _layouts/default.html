@@ -50,11 +50,7 @@
       function toggleBibtex(btn) {
         var box = btn.nextElementSibling;
         if (!box || !box.classList.contains('bibtex-box')) return;
-        if (box.style.display === 'none' || box.style.display === '') {
-          box.style.display = 'block';
-        } else {
-          box.style.display = 'none';
-        }
+        box.classList.toggle('open');
       }
 
       function copyBibtex(btn) {

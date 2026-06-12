@@ -22,13 +22,13 @@ enable_last_update: true
 link_type: icon #text/icon
 google_scholar: https://scholar.google.com/citations?user=_xGaoJ8AAAAJ
 github_link: https://hanyang-chen.github.io/
-cv_link: assets/files/cv.pdf
+cv_link: /assets/files/cv.pdf
 github_link: https://github.com/hanyang-chen
 linkedin: https://www.linkedin.com/in/hanyang-chen-lokol/
 # twitter: https://twitter.com/YaoyaoLiu1/
 
 # Images 
-avatar: ./assets/img/life.jpg
+avatar: /assets/img/life.jpg
 
 # Footnotes
 footnote: Powered by Jekyll and Minimal Light theme.

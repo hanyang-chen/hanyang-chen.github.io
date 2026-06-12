@@ -1,12 +1,14 @@
 <h2 id="publications" class="pub-section-title" >Publications <span class="pub-ext-links"><a href="https://scholar.google.com/citations?user=_xGaoJ8AAAAJ" target="_blank">Google Scholar</a></span></h2>
 
+{% assign preprints = site.data.preprints.main | default: empty %}
+{% if preprints.size > 0 %}
 <h3 class="pub-subsection" style="margin: 30px 0px -30px;">Preprints</h3>
 
 
 <div class="publications">
 <ol class="bibliography">
 
-{% for link in site.data.preprints.main %}
+{% for link in preprints %}
 
 <li>
 <div class="pub-row">
@@ -65,16 +67,19 @@
 
 </ol>
 </div>
+{% endif %}
 
 
 
+{% assign publications = site.data.publications.main | default: empty %}
+{% if publications.size > 0 %}
 <h3 class="pub-subsection" style="margin: 35px 0px -30px;">Publications</h3>
 
 
 <div class="publications">
 <ol class="bibliography">
 
-{% for link in site.data.publications.main %}
+{% for link in publications %}
 
 <li>
 <div class="pub-row">
@@ -132,3 +137,4 @@
 
 </ol>
 </div>
+{% endif %}

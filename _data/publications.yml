@@ -1,13 +1,14 @@
 main:
-  - title: "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning"
-    authors: <strong>Hanyang Chen</strong>, Anirudh Satheesh, Longchao Da, Hua Wei
-    conference_short: IROS 2026
-    conference: IEEE/RSJ International Conference on Intelligent Robots and Systems <strong>(IROS)</strong>, 2026.
-    # pdf: https://www.alphaxiv.org/abs/2605.28603
-    # code: https://github.com/HaonanWen/Under-Cali
-    image: ../assets/pub/img/dadiff.jpg
+  # - title: "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning"
+  #   authors: <strong>Hanyang Chen</strong>, Anirudh Satheesh, Longchao Da, Hua Wei
+  #   conference_short: IROS 2026
+  #   conference: IEEE/RSJ International Conference on Intelligent Robots and Systems <strong>(IROS)</strong>, 2026.
+  #   # pdf: https://www.alphaxiv.org/abs/2605.28603
+  #   # code: https://github.com/HaonanWen/Under-Cali
+  #   image: ../assets/pub/img/dadiff.jpg
 
-  - title: "Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration"
+  - key: under-cali
+    title: "Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration"
     authors: Haonan Wen, <strong>Hanyang Chen</strong>, Songhe Feng
     conference_short: KDD 2026
     conference: ACM SIGKDD Conference on Knowledge Discovery and Data Mining <strong>(KDD)</strong>, 2026.
@@ -15,18 +16,16 @@ main:
     code: https://github.com/HaonanWen/Under-Cali
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: |
-      @misc{wen2026undercali,
-        title={Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration}, 
-        author={Haonan Wen and Hanyang Chen and Songhe Feng},
-        year={2026},
-        eprint={2605.28603},
-        archivePrefix={arXiv},
-        primaryClass={cs.LG},
-        url={https://arxiv.org/abs/2605.28603}, 
+      @article{wen2026online,
+        title={Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration},
+        author={Wen, Haonan and Chen, Hanyang and Feng, Songhe},
+        journal={arXiv preprint arXiv:2605.28603},
+        year={2026}
       }
-    image: ../assets/pub/img/under-cali.jpg
+    image: /assets/pub/img/under-cali.jpg
 
-  - title: "Proactive-XLight: Proactive Traffic Signal Control with Pluggable and Reliable Traffic Prediction"
+  - key: proactive-xlight
+    title: "Proactive-XLight: Proactive Traffic Signal Control with Pluggable and Reliable Traffic Prediction"
     authors: Yang Jiang, Shengnan Guo, <strong>Hanyang Chen</strong>, Xiaowei Mao, Youfang Lin, Huaiyu Wan
     conference_short: IEEE TMC
     conference: IEEE Transactions on Mobile Computing <strong>(TMC)</strong>, 2025.
@@ -40,10 +39,10 @@ main:
         year={2025},
         publisher={IEEE}
       }
-    image: ../assets/pub/img/proactive-xlight.jpg
-    # notes: Early Access
+    image: /assets/pub/img/proactive-xlight.jpg
 
-  - title: "DiffLight: A Partial Rewards Conditioned Diffusion Model for Traffic Signal Control with Missing Data"
+  - key: difflight
+    title: "DiffLight: A Partial Rewards Conditioned Diffusion Model for Traffic Signal Control with Missing Data"
     authors: <strong>Hanyang Chen</strong>, Yang Jiang, Shengnan Guo, Xiaowei Mao, Youfang Lin, Huaiyu Wan
     conference_short: NeurIPS 2024
     conference: Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2024.
@@ -60,4 +59,23 @@ main:
         year={2024}
       }
     notes: Spotlight Paper
-    image: ../assets/pub/img/difflight.jpg
+    image: /assets/pub/img/difflight.jpg
+
+  - key: taxi-sharing
+    title: "Taxi-Sharing Matching Equilibrium Under Peer-Passenger Incentive Mechanism"
+    authors: Zixuan Peng, Lin Cui, Zhiwei Guo, <strong>Hanyang Chen</strong>, Liying Wei
+    conference_short: JSCUT
+    conference: Journal of South China University of Technology (Natural Science Edition), 2024.
+    pdf: https://www.sciopen.com/article/10.12141/j.issn.1000-565X.230158
+    bibtex: |
+      @article{peng2024taxi,
+        title={Taxi-Sharing Matching Equilibrium Under Peer-Passenger Incentive Mechanism},
+        author={Peng, Zixuan and Cui, Lin and Guo, Zhiwei and Chen, Hanyang and Wei, Liying},
+        journal={Journal of South China University of Technology (Natural Science Edition)},
+        volume={52},
+        number={2},
+        pages={95--103},
+        year={2024},
+        publisher={华南理工大学学报编辑部}
+      }
+    image: /assets/pub/img/taxi-sharing.png

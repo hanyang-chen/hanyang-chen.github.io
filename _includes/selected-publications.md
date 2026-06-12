@@ -3,7 +3,9 @@
 <div class="publications">
 <ol class="bibliography">
 
-{% for link in site.data.selected-publications.main %}
+{% for key in site.data.selected-publications.selected %}
+{% assign link = site.data.publications.main | where: 'key', key | first %}
+{% if link %}
 
 <li>
 <div class="pub-row">
@@ -55,6 +57,7 @@
 </div>
 </li>
 
+{% endif %}
 {% endfor %}
 
 </ol>
