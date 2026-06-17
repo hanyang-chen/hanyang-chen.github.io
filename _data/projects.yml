@@ -1,0 +1,35 @@
+main:
+
+  - title: "Intelligent Transportation Systems"
+    description: |
+      My research develops AI-driven methods for urban traffic management, with a focus on traffic signal control.
+      I build reinforcement learning approaches that address real-world challenges such as missing traffic data and proactive decision-making,
+      aiming to improve traffic flow and reduce congestion in dynamic urban environments.
+    # image: /assets/projects/img/tsc.jpg
+    video: /assets/projects/video/tsc.mp4
+    year: 2024 — 2026
+    tags:
+      - "Traffic Signal Control"
+      - "Reinforcement Learning"
+
+  - title: "Off-Dynamics Reinforcement Learning"
+    description: |
+      I study how to train reinforcement learning agents that can adapt to target environments whose dynamics differ from those seen during training.
+      The goal is to improve policy robustness and generalization when deploying RL systems in new domains with varying dynamics.
+    # image: /assets/projects/img/rl.jpg
+    video: /assets/projects/video/rl.mp4
+    year: 2025 — 2026
+    tags:
+      - "Cross-Domain Adaptation"
+      - "Reinforcement Learning"
+
+  - title: "Vision-Language-Action Models"
+    description: |
+      I investigate how Vision-Language-Action (VLA) models integrate visual perception, language understanding, and action generation for embodied agents.
+      My focus is on improving their semantic understanding of visual and linguistic instructions so that agents can make more reliable decisions in interactive environments.
+    # image: /assets/projects/img/vla.jpg
+    video: /assets/projects/video/vla.mp4
+    year: 2026
+    tags:
+      - "Vision-Language-Action"
+      - "Embodied AI"

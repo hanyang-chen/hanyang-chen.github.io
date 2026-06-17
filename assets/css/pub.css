@@ -170,3 +170,58 @@ h3.pub-subsection { font-size: 0.95rem; font-weight: 700; color: #666; text-tran
   border: none;
   overflow-x: auto;
 }
+
+/* Projects page styles */
+.publications ol.bibliography li .abbr.project-media .teaser {
+  display: block;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.30);
+  width: 270px;
+  max-width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: box-shadow 0.2s ease;
+}
+
+.publications ol.bibliography li .abbr.project-media {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  min-height: auto;
+}
+
+.publications ol.bibliography li .abbr.project-media video.teaser {
+  background-color: #000;
+}
+
+.publications ol.bibliography li:hover .abbr.project-media .teaser {
+  box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.42);
+}
+
+.project-description {
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.project-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  vertical-align: middle;
+}
+
+.project-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: #13294B;
+  background-color: #eef1f5;
+  border: 1px solid #d5dbe4;
+  border-radius: 4px;
+  padding: 1px 8px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}

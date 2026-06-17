@@ -1,11 +1,12 @@
 main:
-  # - title: "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning"
-  #   authors: <strong>Hanyang Chen</strong>, Anirudh Satheesh, Longchao Da, Hua Wei
-  #   conference_short: IROS 2026
-  #   conference: IEEE/RSJ International Conference on Intelligent Robots and Systems <strong>(IROS)</strong>, 2026.
-  #   # pdf: https://www.alphaxiv.org/abs/2605.28603
-  #   # code: https://github.com/HaonanWen/Under-Cali
-  #   image: ../assets/pub/img/dadiff.jpg
+  - key: dadiff
+    title: "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning"
+    authors: <strong>Hanyang Chen</strong>, Anirudh Satheesh, Longchao Da, Hua Wei
+    conference_short: IROS 2026
+    conference: IEEE/RSJ International Conference on Intelligent Robots and Systems <strong>(IROS)</strong>, 2026.
+    # pdf: https://www.alphaxiv.org/abs/2605.28603
+    # code: https://github.com/HaonanWen/Under-Cali
+    image: /assets/pub/img/dadiff.jpg
 
   - key: under-cali
     title: "Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration"
@@ -33,11 +34,13 @@ main:
     code: https://github.com/YangJiangDev/Proactive-XLight
     bibtex: |
       @article{jiang2025proactive,
-        title={Proactive-XLight: Proactive Traffic Signal Control with Pluggable and Reliable Traffic Prediction},
+        title={Proactive-XLight: Proactive Traffic Signal Control With Pluggable and Reliable Traffic Prediction}, 
         author={Jiang, Yang and Guo, Shengnan and Chen, Hanyang and Mao, Xiaowei and Lin, Youfang and Wan, Huaiyu},
-        journal={IEEE Transactions on Mobile Computing},
+        journal={IEEE Transactions on Mobile Computing}, 
         year={2025},
-        publisher={IEEE}
+        volume={24},
+        number={11},
+        pages={11465-11479},
       }
     image: /assets/pub/img/proactive-xlight.jpg
 

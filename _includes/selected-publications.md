@@ -5,13 +5,18 @@
 
 {% for key in site.data.selected-publications.selected %}
 {% assign link = site.data.publications.main | where: 'key', key | first %}
+{% assign is_preprint = false %}
+{% unless link %}
+{% assign link = site.data.preprints.main | where: 'key', key | first %}
+{% assign is_preprint = true %}
+{% endunless %}
 {% if link %}
 
 <li>
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
-            <abbr class="badge">{{ link.conference_short }}</abbr>
+            <abbr class="badge"{% if is_preprint %} data-venue="{{ link.conference_short }}"{% endif %}>{{ link.conference_short }}</abbr>
   </div>
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
       <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
@@ -38,11 +43,13 @@
         {% else %}
         <a href="javascript:void(0);" class="btn btn-sm z-depth-0" onclick="toggleBibtex(this)" style="font-size:12px;">BibTex</a>
         <div class="bibtex-box">
-          <div class="bibtex-header">
-            <span>BibTeX</span>
-            <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+          <div class="bibtex-inner">
+            <div class="bibtex-header">
+              <span>BibTeX</span>
+              <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+            </div>
+            <pre class="bibtex-content">{{ link.bibtex | strip }}</pre>
           </div>
-          <pre class="bibtex-content">{{ link.bibtex | strip }}</pre>
         </div>
         {% endif %}
       {% endif %}

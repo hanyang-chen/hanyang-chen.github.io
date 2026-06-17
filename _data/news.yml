@@ -3,27 +3,26 @@ items:
     content: 'Glad to receive the award of "Outstanding Thesis of School of Computer Science and Technology in Beijing Jiaotong University".'
     hidden: true
 
-  - date: "Jun. 2026"
+  - date: "2026-06-17"
     content: 'Our paper: "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning" is accepted by IROS 2026. See you in Pittsburgh!'
-    hidden: true
 
-  - date: "Jun. 2026"
+  - date: "2026-05-23"
     content: 'Glad to receive the award of "Outstanding Graduate Students of Beijing Jiaotong University".'
 
-  - date: "Mar. 2026"
+  - date: "2026-05-16"
     content: 'Our paper: "<a href="https://www.alphaxiv.org/abs/2605.28603">Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration</a>" is accepted by KDD 2026. See you in Jeju!'
 
-  - date: "Jun. 2025"
+  - date: "2025-06-20"
     content: 'Our paper: "<a href="https://ieeexplore.ieee.org/document/11045885">Proactive-XLight: Proactive Traffic Signal Control with Pluggable and Reliable Traffic Prediction</a>" is accepted by IEEE TMC. It is available now!'
 
-  - date: "Dec. 2024"
+  - date: "2024-11-08"
     content: "I have received the National Scholarship."
 
-  - date: "Oct. 2024"
+  - date: "2024-10-12"
     content: "I have received the NeurIPS 2024 Scholar Award."
 
-  - date: "Sep. 2024"
+  - date: "2024-09-26"
     content: 'Our paper: "<a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/df20e06b04dfc499a1a698796abb0856-Abstract-Conference.html">DiffLight: A Partial Rewards Conditioned Diffusion Model for Traffic Signal Control with Missing Data</a>" is accepted by NeurIPS 2024. See you in Vancouver!'
 
-  - date: "Jun. 2023"
+  - date: "2023-06-21"
     content: 'Glad to receive the award of "Outstanding Graduate Students of Beijing".'

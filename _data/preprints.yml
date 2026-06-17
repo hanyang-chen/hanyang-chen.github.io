@@ -1,11 +1,17 @@
 main:
 
-  # - title: "Lost in Translation: Evaluating Multilingual Gaps in Vision-Language-Action Models"
-  #   authors: <strong>Hanyang Chen</strong>, Hongliang Li, Jiarui Cao, Yang Li, Yang Jiang, Haonan Wen, Kaiyu Huang, Shengnan Guo, Huaiyu Wan
-  #   conference_short: arXiv
-  #   conference: arXiv:xxxx.xxxxx, 2026.
-  #   year: 2026
-  #   pdf: https://arxiv.org/pdf/2603.06852
-  #   bibtex: https://bib.yliu.me/active_view.txt
-  #   # code: https://github.com/HaonanWen/Under-Cali
-  #   image: ../assets/pub/img/mpca.jpg
+  - key: mvla
+    title: "Beyond English: Uncovering the Multilingual Gap in Vision-Language-Action Models"
+    authors: <strong>Hanyang Chen</strong>, Hongliang Li, Jiarui Cao, Yang Li, Yang Jiang, Haonan Wen, Kaiyu Huang, Shengnan Guo, Huaiyu Wan
+    conference_short: arXiv
+    conference: arXiv:2606.15714, 2026.
+    year: 2026
+    pdf: https://www.alphaxiv.org/abs/2606.15714
+    bibtex: |
+      @article{chen2026english,
+        title={Beyond English: Uncovering the Multilingual Gap in Vision-Language-Action Models},
+        author={Chen, Hanyang and Li, Hongliang and Cao, Jiarui and Li, Yang and Jiang, Yang and Wen, Haonan and Huang, Kaiyu and Guo, Shengnan and Wan, Huaiyu},
+        journal={arXiv preprint arXiv:2606.15714},
+        year={2026}
+      }
+    image: /assets/pub/img/mpca.jpg
