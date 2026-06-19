@@ -45,3 +45,4 @@ exclude:
   - README.md
   - LICENSE
   - CNAME
+  - html_source_file

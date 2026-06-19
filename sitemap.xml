@@ -7,38 +7,66 @@
 >
 
 <url>
- <loc>https://yaoyaoliu.cs.illinois.edu/</loc>
+ <loc>https://hanyang-chen.github.io/</loc>
  <priority>1.0</priority>
- <lastmod>2024-08-01</lastmod>
+ <lastmod>2026-06-19</lastmod>
  <changefreq>weekly</changefreq>
 </url>
 
 <url>
- <loc>https://yaoyaoliu.cs.illinois.edu/publications/</loc>
- <priority>1.0</priority>
- <lastmod>2024-08-01</lastmod>
+ <loc>https://hanyang-chen.github.io/blogs/</loc>
+ <priority>0.7</priority>
+ <lastmod>2026-06-19</lastmod>
  <changefreq>weekly</changefreq>
 </url>
 
 <url>
- <loc>https://yaoyaoliu.cs.illinois.edu/teaching/</loc>
- <priority>1.0</priority>
- <lastmod>2024-08-01</lastmod>
- <changefreq>weekly</changefreq>
+ <loc>https://hanyang-chen.github.io/blogs/hello-world/</loc>
+ <priority>0.6</priority>
+ <lastmod>2026-06-19</lastmod>
+ <changefreq>monthly</changefreq>
 </url>
 
 <url>
- <loc>https://yaoyaoliu.cs.illinois.edu/talks/</loc>
- <priority>1.0</priority>
- <lastmod>2024-08-01</lastmod>
- <changefreq>weekly</changefreq>
+ <loc>https://hanyang-chen.github.io/cv/</loc>
+ <priority>0.6</priority>
+ <lastmod>2026-06-19</lastmod>
+ <changefreq>monthly</changefreq>
 </url>
 
 <url>
- <loc>https://yaoyaoliu.cs.illinois.edu/services/</loc>
- <priority>1.0</priority>
- <lastmod>2024-08-01</lastmod>
- <changefreq>weekly</changefreq>
+ <loc>https://hanyang-chen.github.io/projects/</loc>
+ <priority>0.7</priority>
+ <lastmod>2026-06-19</lastmod>
+ <changefreq>monthly</changefreq>
+</url>
+
+<url>
+ <loc>https://hanyang-chen.github.io/publications/</loc>
+ <priority>0.8</priority>
+ <lastmod>2026-06-19</lastmod>
+ <changefreq>monthly</changefreq>
+</url>
+
+<url>
+ <loc>https://hanyang-chen.github.io/research-group/</loc>
+ <priority>0.6</priority>
+ <lastmod>2026-06-19</lastmod>
+ <changefreq>monthly</changefreq>
+</url>
+
+<url>
+ <loc>https://hanyang-chen.github.io/services/</loc>
+ <priority>0.6</priority>
+ <lastmod>2026-06-19</lastmod>
+ <changefreq>monthly</changefreq>
+</url>
+
+<url>
+ <loc>https://hanyang-chen.github.io/teaching/</loc>
+ <priority>0.6</priority>
+ <lastmod>2026-06-19</lastmod>
+ <changefreq>monthly</changefreq>
 </url>
 
 </urlset>

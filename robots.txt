@@ -7,10 +7,11 @@ Disallow: /assets/fontawesome/
 Disallow: /assets/js/
 Disallow: /images/
 Disallow: /google_scholar_crawler/
+Disallow: /html_source_file/
 Disallow: /404.html
 Disallow: /LICENSE
 Disallow: /.gitignore
 Disallow: /.github/
 Disallow: /README.md
 
-Sitemap: https://yaoyaoliu.csl.illinois.edu/sitemap.xml
+Sitemap: https://hanyang-chen.github.io/sitemap.xml
