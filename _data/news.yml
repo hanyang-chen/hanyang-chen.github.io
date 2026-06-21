@@ -1,13 +1,12 @@
 items:
-  - date: "Jun. 2026"
+  - date: "2026-06-21"
     content: 'Glad to receive the award of "Outstanding Master''s Thesis of Beijing Jiaotong University".'
-    hidden: true
 
   - date: "2026-06-17"
     content: 'Our paper: "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning" is accepted by IROS 2026. See you in Pittsburgh!'
 
   - date: "2026-05-23"
-    content: 'Glad to receive the award of "Outstanding Graduate Students of Beijing Jiaotong University".'
+    content: 'Glad to receive the award of "Outstanding Graduating Student of Beijing Jiaotong University".'
 
   - date: "2026-05-16"
     content: 'Our paper: "<a href="https://www.alphaxiv.org/abs/2605.28603">Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration</a>" is accepted by KDD 2026. See you in Jeju!'
@@ -25,4 +24,4 @@ items:
     content: 'Our paper: "<a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/df20e06b04dfc499a1a698796abb0856-Abstract-Conference.html">DiffLight: A Partial Rewards Conditioned Diffusion Model for Traffic Signal Control with Missing Data</a>" is accepted by NeurIPS 2024. See you in Vancouver!'
 
   - date: "2023-06-21"
-    content: 'Glad to receive the award of "Outstanding Graduate Students of Beijing".'
+    content: 'Glad to receive the award of "Outstanding Graduating Student of Beijing".'
