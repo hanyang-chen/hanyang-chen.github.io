@@ -10,7 +10,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ site.title }}">
-    <meta property="og:url" content="{{ site.canonical }}{{ page.permalink }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:description" content="{{ site.description }}">
     <meta property="og:locale" content="default">
@@ -20,7 +20,7 @@
     <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image" content="{{ site.avatar }}">
 
-    <link rel="canonical" href="{{ site.canonical }}{{ page.permalink }}"/>
+    <link rel="canonical" href="{{ page.url | absolute_url }}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Ubuntu+Mono&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="../assets/css/pub.css">
     <link rel="stylesheet" href="../assets/css/nav.css">
 
-    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <!-- <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css"> -->
     
     <script src="../assets/js/github-stars.js"></script>
     <script type="text/javascript" src="../assets/js/jquery.js"></script>

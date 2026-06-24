@@ -7,8 +7,9 @@ position: Incoming Ph.D. Student
 email: hanyang-chen [at] outlook.com
 
 # Search Engine Optimization (SEO)
+url: https://hanyang-chen.github.io
+baseurl: ""
 keywords: hanyang chen, chen hanyang, hanyangchen, chenhanyang, 陈晗阳
-canonical: https://hanyang-chen.github.io/
 description: Hanyang Chen is an incoming Ph.D. student at the Arizona State University. His research lies in reinforcement learning, data mining, and large language models.
 
 # The option is used to show the last update time.
