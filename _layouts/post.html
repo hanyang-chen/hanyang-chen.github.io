@@ -4,14 +4,14 @@ layout: default
 
 <p style="margin: 20px 0 10px;">
   <a href="/blogs/" style="font-size: 0.95em; color: #13294B; text-decoration: none;">
-    <i class="fa fa-arrow-left" style="margin-right: 6px;"></i>Back to Blogs
+    <i class="fa fa-arrow-left" style="margin-right: 6px;" aria-hidden="true"></i>Back to Blogs
   </a>
 </p>
 
 <h2 style="margin: 20px 0px 10px;">{{ page.title }}</h2>
 
 <p style="color: #777; font-size: 0.92em; margin-bottom: 24px;">
-  <i class="fa fa-calendar"></i> &nbsp;{{ page.date | date: "%B %d, %Y" }}
+  <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp;{{ page.date | date: "%B %d, %Y" }}
 </p>
 
 {{ content }}

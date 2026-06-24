@@ -14,7 +14,7 @@
     {% if link.video %}
     <video src="{{ link.video }}" class="teaser" autoplay muted loop playsinline preload="metadata"{% if link.image %} poster="{{ link.image }}"{% endif %}></video>
     {% elsif link.image %}
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
+    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" alt="Teaser image for {{ link.title }}">
     {% endif %}
   </div>
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -42,13 +42,13 @@
       <div class="project-description">{{ link.description }}</div>
     <div class="links">
       {% if link.page %}
-      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
+      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="Project page for {{ link.title }}">Project Page</a>
       {% endif %}
       {% if link.code %}
-      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
+      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="Code for {{ link.title }}">Code</a>
       {% endif %}
       {% if link.pdf %}
-      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="PDF for {{ link.title }}">PDF</a>
       {% endif %}
     </div>
   </div>

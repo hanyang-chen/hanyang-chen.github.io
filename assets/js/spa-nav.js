@@ -168,6 +168,7 @@
           if (blur) blur.style.height = '48px';
         });
         icon.classList.remove('active');
+        icon.setAttribute('aria-expanded', 'false');
       } else {
         // Expand
         x.classList.add('open');
@@ -175,6 +176,7 @@
         x.style.height = targetHeight + 'px';
         if (blur) blur.style.height = (48 + targetHeight) + 'px';
         icon.classList.add('active');
+        icon.setAttribute('aria-expanded', 'true');
       }
     };
 

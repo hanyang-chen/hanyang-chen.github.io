@@ -15,7 +15,7 @@
 <li>
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
+    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" alt="Teaser figure for {{ link.title }}">
             <abbr class="badge"{% if is_preprint %} data-venue="{{ link.conference_short }}"{% endif %}>{{ link.conference_short }}</abbr>
   </div>
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -25,23 +25,23 @@
       </div>
     <div class="links">
       {% if link.pdf %} 
-      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="PDF for {{ link.title }}">PDF</a>
       {% endif %}
       {% if link.code %} 
-      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
+      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="Code for {{ link.title }}">Code</a>
       {% endif %}
       {% if link.page %} 
-      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
+      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="Project page for {{ link.title }}">Project Page</a>
       {% endif %}
       {% if link.data %} 
-      <a href="{{ link.data }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Dataset</a>
+      <a href="{{ link.data }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="Dataset for {{ link.title }}">Dataset</a>
       {% endif %}
       {% if link.bibtex %}
         {% assign b = link.bibtex | strip %}
         {% if b contains 'http' %}
-        <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
+        <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="BibTeX for {{ link.title }}">BibTex</a>
         {% else %}
-        <a href="javascript:void(0);" class="btn btn-sm z-depth-0" onclick="toggleBibtex(this)" style="font-size:12px;">BibTex</a>
+        <a href="javascript:void(0);" class="btn btn-sm z-depth-0" onclick="toggleBibtex(this)" style="font-size:12px;" role="button" aria-expanded="false" aria-label="Show BibTeX for {{ link.title }}">BibTex</a>
         <div class="bibtex-box">
           <div class="bibtex-inner">
             <div class="bibtex-header">
