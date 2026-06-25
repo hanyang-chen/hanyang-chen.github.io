@@ -49,3 +49,7 @@ exclude:
   - README.md
   - LICENSE
   - CNAME
+
+# Plugins
+plugins:
+  - jekyll-sitemap
