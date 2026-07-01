@@ -4,14 +4,22 @@ layout: homepage
 
 <h1 id="about-me" style="margin: 40px 0 10px; display: flex; align-items: center; gap: 8px;">
   <span>About Me</span>
-  <img src="./assets/img/mario.png" alt="It's-a me, Mario!" title="It's-a me! Click me!"
+  <img id="mario-icon" src="./assets/img/mario.png" alt="It's-a me, Mario!" title="It's-a me! Click me!"
        onclick="toggleMario(this)"
-       style="height: 20px; cursor: pointer; transition: transform 0.2s ease;"
-       onmouseover="this.style.transform='translateY(-3px) rotate(-6deg)'"
-       onmouseout="this.style.transform='translateY(0) rotate(0)'" />
+       style="height: 20px; cursor: pointer; transition: transform 0.2s ease;" />
 </h1>
 
 <style>
+  /* Hover tilt for pointer devices (won't "stick" on touch) */
+  @media (hover: hover) {
+    #mario-icon:hover {
+      transform: translateY(-3px) rotate(-6deg);
+    }
+  }
+  /* Persistent tilt tied to the toggle state — flips on every tap */
+  #mario-icon.tilted {
+    transform: translateY(-3px) rotate(-6deg);
+  }
   #mario-fan {
     max-height: 0;
     overflow: hidden;
@@ -25,7 +33,8 @@ layout: homepage
 </style>
 <script type="text/javascript">
   function toggleMario(icon) {
-    document.getElementById('mario-fan').classList.toggle('open');
+    const isOpen = document.getElementById('mario-fan').classList.toggle('open');
+    icon.classList.toggle('tilted', isOpen);
   }
 </script>
 
