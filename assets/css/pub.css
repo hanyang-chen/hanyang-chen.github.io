@@ -20,7 +20,36 @@
 
 :root { --global-bg-color: #ffffff; --global-code-bg-color: rgba(181, 9, 172, 0.05); --global-text-color: #000000; --global-text-color-light: #828282; --global-theme-color: #13294B; --global-hover-color: #ffb81c; --global-footer-bg-color: #1c1c1c; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-distill-app-color: #828282; }
 
-blockquote { background: var(--global-bg-color); border-left: 2px solid var(--global-theme-color); margin: 1.5em 10px; padding: 0.5em 10px; font-size: 1.2rem; }
+blockquote {
+  background: #f5f7fa;
+  border-left: 4px solid #13294B;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5em 0;
+  padding: 1em 1.2em;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-style: normal;
+}
+
+blockquote p {
+  margin: 0 0 0.6em;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote a {
+  color: #0066aa;
+  text-decoration: none;
+}
+
+blockquote a:hover {
+  color: #13294B;
+  text-decoration: underline;
+}
 
 @media print, screen and (min-width: 480px) {.col-sm-9 {width: 100%;}}
 

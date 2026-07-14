@@ -232,6 +232,65 @@
     var section = document.querySelector('section');
     if (!section) return;
 
+    function typesetMathJax(target) {
+      if (!window.MathJax) {
+        // The source layout did not load MathJax; load it dynamically now.
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          },
+          startup: {
+            pageReady: function() {
+              return MathJax.startup.defaultPageReady().then(function() {
+                if (MathJax.typesetPromise) {
+                  MathJax.typesetPromise([target]).catch(function(err) {
+                    console.error('MathJax typeset failed:', err);
+                  });
+                }
+              });
+            }
+          }
+        };
+        var script = document.createElement('script');
+        script.id = 'MathJax-script';
+        script.async = true;
+        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+        document.head.appendChild(script);
+        return;
+      }
+
+      function runTypeset() {
+        if (window.MathJax.typesetPromise) {
+          window.MathJax.typesetPromise([target]).catch(function(err) {
+            console.error('MathJax typeset failed:', err);
+          });
+        }
+      }
+
+      if (window.MathJax.startup && window.MathJax.startup.promise) {
+        window.MathJax.startup.promise.then(runTypeset).catch(function(err) {
+          console.error('MathJax startup failed:', err);
+        });
+      } else {
+        runTypeset();
+      }
+    }
+
+    function initAutoplayVideos() {
+      var videos = document.querySelectorAll('video[autoplay]');
+      for (var i = 0; i < videos.length; i++) {
+        var video = videos[i];
+        video.load();
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function(err) {
+            console.log('Autoplay prevented:', err);
+          });
+        }
+      }
+    }
+
     var spinner = document.getElementById('page-spinner');
     if (!spinner) {
       spinner = document.createElement('div');
@@ -373,11 +432,14 @@
       el.textContent = modiDate.getDate() + ". " + monthNames[modiDate.getMonth()] + " " + modiDate.getFullYear();
     }
 
-    function navigateTo(href, pushHistory) {
+    function navigateTo(href, pushHistory, isHistoryNav) {
       var absUrl = new URL(href, window.location.href).href;
       var currentUrl = window.location.href;
 
-      if (absUrl === currentUrl) {
+      // For normal clicks, skip if already on the same URL.
+      // For history navigation (back/forward), the URL has already changed,
+      // so we must always update the section content.
+      if (!isHistoryNav && absUrl === currentUrl) {
         return;
       }
 
@@ -423,6 +485,12 @@
 
           setTimeout(function() {
             if (mySeq !== navSequence) return;
+
+            // Clear any existing MathJax typesetting before replacing content
+            if (window.MathJax && window.MathJax.typesetClear) {
+              MathJax.typesetClear([section]);
+            }
+
             section.innerHTML = result.html;
             document.title = result.title;
             section.style.opacity = '1';
@@ -434,6 +502,17 @@
             updateActiveNav();
             updateLastModifiedDate();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Re-run MathJax on the newly inserted content
+            typesetMathJax(section);
+
+            // Re-initialize carousels after SPA navigation
+            if (typeof window.initCarousels === 'function') {
+              window.initCarousels();
+            }
+
+            // Re-trigger autoplay videos after SPA navigation
+            initAutoplayVideos();
 
             hideSpinner();
             isNavigating = false;
@@ -485,7 +564,7 @@
 
     window.addEventListener('popstate', function(e) {
       if (e.state && e.state.spaUrl) {
-        navigateTo(e.state.spaUrl, false);
+        navigateTo(e.state.spaUrl, false, true);
       } else {
         window.location.reload();
       }

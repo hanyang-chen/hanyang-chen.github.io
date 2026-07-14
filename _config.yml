@@ -39,7 +39,14 @@ clustrmaps_id: d-i4zyeRqlmUSeBatSv55Moy1awt9Gyme2Ppb5xqWGo
 # Google Analytics 4 (gtag.js)
 google_analytics_id: G-HGY04MME0D
 
-permalink: /blogs/:title/
+# Blogs collection: each blog is a folder containing index.md + images.
+collections:
+  blogs:
+    output: true
+
+# Enable LaTeX math rendering via MathJax.
+kramdown:
+  math_engine: mathjax
 
 # The following files will be removed from the generated website.
 exclude:

@@ -26,15 +26,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Ubuntu+Mono&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/pub.css">
-    <link rel="stylesheet" href="./assets/css/nav.css">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/pub.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/nav.css" | relative_url }}">
 
     <!-- <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css"> -->
-    
-    <script src="./assets/js/github-stars.js"></script>
-    <script type="text/javascript" src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/spa-nav.js"></script>
+
+    <script src="{{ "/assets/js/github-stars.js" | relative_url }}"></script>
+    <script type="text/javascript" src="{{ "/assets/js/jquery.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/spa-nav.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/carousel.js" | relative_url }}"></script>
 
     <style>
       #newsmore {
@@ -115,6 +116,16 @@
    </script>
 
     {% include google-analytics.html %}
+
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
     
@@ -134,7 +145,7 @@
     </div>
     
 
-    <script src="./assets/js/vanilla-back-to-top.min.js"></script>
+    <script src="{{ "/assets/js/vanilla-back-to-top.min.js" | relative_url }}"></script>
     <script>addBackToTop({
         backgroundColor: '#13294B',
         textColor: '#fff',
