@@ -16,10 +16,8 @@
           <a href="{{ post.url }}">{{ post.title }}</a>
         </div>
         {% if post.venue or post.authors %}
-        <div class="cv-item-meta" style="color: #777; margin: 2px 0 4px;">
-          {% if post.venue %}{{ post.venue }}{% endif %}
-          {% if post.venue and post.authors %}&nbsp;&nbsp;|&nbsp;&nbsp;{% endif %}
-          {% if post.authors %}{{ post.authors }}{% endif %}
+        <div class="cv-item-meta" style="margin: 2px 0 4px;">
+          <strong>{% if post.venue %}{{ post.venue }}{% endif %}{% if post.venue and post.authors %} | {% endif %}{% if post.authors %}{{ post.authors }}{% endif %}</strong>
         </div>
         {% endif %}
         <div class="cv-item-sub">
