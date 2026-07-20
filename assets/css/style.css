@@ -148,3 +148,88 @@ html{scroll-behavior:smooth;overflow-y:scroll}body{background-color:#fff;padding
     border-bottom-color: #13294B;
   }
 }
+
+/* ============================================================
+   Text Justification and Hyphenation
+   ============================================================ */
+
+section p,
+.hc-summary,
+.project-description,
+.publications ol.bibliography li .hidden {
+  text-align: justify;
+  text-align-last: left;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.publications .pub-row > .col-sm-9,
+.hc-card,
+.hc-title,
+.hc-summary,
+.publications ol.bibliography li .title {
+  min-width: 0;
+}
+
+.hc-title,
+.publications ol.bibliography li .title,
+.publications ol.bibliography li .title a {
+  text-align: left;
+  text-align-last: left;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.hc-summary {
+  overflow-wrap: anywhere;
+}
+
+code,
+pre,
+.bibtex-content,
+.links,
+.pub-ext-links,
+.social-icons,
+.publications h2.year,
+h2.pub-section-title,
+h3.pub-subsection,
+.news-scroll > div,
+.publications ol.bibliography li .author,
+.publications ol.bibliography li .periodical,
+.project-tags,
+.project-tag,
+.badge {
+  text-align: initial;
+  text-align-last: initial;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+  overflow-wrap: normal;
+}
+
+/* Keep mixed icon fonts optically centered in the profile block. */
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin: 0 !important;
+}
+
+.social-icons a i {
+  display: block;
+  line-height: 1;
+}

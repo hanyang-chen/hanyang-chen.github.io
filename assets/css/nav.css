@@ -60,6 +60,10 @@
   display: none;
 }
 
+.topnav .mobile-nav-brand {
+  display: none;
+}
+
 /* Logo image */
 .topnav img {
   margin-bottom: 0;
@@ -135,6 +139,37 @@
 
   .nav-slider {
     display: none !important;
+  }
+
+  .topnav .mobile-nav-brand {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    color: #13294B;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 650;
+    text-decoration: none;
+    letter-spacing: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .topnav.brand-visible .mobile-nav-brand {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .topnav .mobile-nav-brand:hover {
+    color: #13294B;
+    text-decoration: none;
   }
 
   /* Dropdown menu — use height transition for sync with blur layer */

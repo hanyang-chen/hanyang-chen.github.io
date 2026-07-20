@@ -35,7 +35,7 @@ Robots will be deployed globally and must understand Chinese, French, Arabic, Ru
 
 We translate existing robot benchmark instructions into **Chinese, French, Russian, and Arabic**, and also create **code-switching** variants (e.g., “pick up 碗”). Evaluation is done on LIBERO and SimplerEnv via a Multilingual Evaluation Adapter.
 
-![Multilingual evaluation framework for VLAs](images/framework.jpg)
+![Multilingual evaluation framework for VLAs](/blogs/mvla/images/framework.jpg)
 *Figure 1: Three-stage pipeline: instruction construction → evaluation & analysis → performance enhancement.*
 
 ---
@@ -79,15 +79,15 @@ Code-switching instructions (e.g., “pick up 碗”) outperform fully translate
 
 ### Two Failure Modes
 
-![Failure case 1: French instruction confusion](images/fr_turn_on_the_stove.png)
+![Failure case 1: French instruction confusion](/blogs/mvla/images/fr_turn_on_the_stove.png)
 *Figure 2a: Instruction misunderstanding — the French “turn on the stove” is confused with “put the bowl on the plate” in LIBERO-Goal.*
 
-![Failure case 2: Chinese action-execution failure](images/zh_pick_up_the_cream_cheese_and_place_it_in_the_basket.png)
+![Failure case 2: Chinese action-execution failure](/blogs/mvla/images/zh_pick_up_the_cream_cheese_and_place_it_in_the_basket.png)
 *Figure 2b: Action-execution failure — the Chinese instruction is understood, but the grasp-and-place motion is wrong.*
 
 ### Representation Shift
 
-![Embedding-space comparison](images/pi_comparison.jpg)
+![Embedding-space comparison](/blogs/mvla/images/pi_comparison.jpg)
 *Figure 3: Average-pooled embeddings from the middle layer. Qwen3-VL-π (left) keeps English and Chinese closer; π₀.₅ (right) pushes all non-English embeddings far from English.*
 
 Embedding distance correlates with performance: better cross-lingual alignment predicts better multilingual execution.

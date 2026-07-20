@@ -130,6 +130,7 @@
   <body>
     
     <div class="topnav">
+      <a href="/" class="mobile-nav-brand" aria-label="Home">Hanyang Chen</a>
 
       <div id="myLinks">
       {% include navigation-home.md %}
@@ -275,6 +276,40 @@
         <br>
       </footer>
     </div>
+    <script>
+      (function() {
+        var nav = document.querySelector('.topnav');
+        var profile = document.querySelector('.wrapper > header');
+        if (!nav || !profile) return;
+
+        var ticking = false;
+        var mq = window.matchMedia('(max-width: 1100px)');
+
+        function updateBrandVisibility() {
+          ticking = false;
+          if (!mq.matches) {
+            nav.classList.remove('brand-visible');
+            return;
+          }
+          nav.classList.toggle('brand-visible', profile.getBoundingClientRect().bottom <= 48);
+        }
+
+        function requestUpdate() {
+          if (ticking) return;
+          ticking = true;
+          window.requestAnimationFrame(updateBrandVisibility);
+        }
+
+        window.addEventListener('scroll', requestUpdate, { passive: true });
+        window.addEventListener('resize', requestUpdate);
+        if (mq.addEventListener) {
+          mq.addEventListener('change', requestUpdate);
+        } else if (mq.addListener) {
+          mq.addListener(requestUpdate);
+        }
+        updateBrandVisibility();
+      })();
+    </script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>

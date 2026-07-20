@@ -36,6 +36,9 @@
       {% if link.data %} 
       <a href="{{ link.data }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="Dataset for {{ link.title }}">Dataset</a>
       {% endif %}
+      {% if link.blog %} 
+      <a href="{{ link.blog }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;" aria-label="Blog post for {{ link.title }}">Blog</a>
+      {% endif %}
       {% if link.bibtex %}
         {% assign b = link.bibtex | strip %}
         {% if b contains 'http' %}
