@@ -4,14 +4,14 @@ main:
     authors: <strong>Hanyang Chen</strong>, Anirudh Satheesh, Longchao Da, Hua Wei
     conference_short: IROS 2026
     conference: IEEE/RSJ International Conference on Intelligent Robots and Systems <strong>(IROS)</strong>, 2026.
-    pdf: https://www.alphaxiv.org/abs/2605.28603
+    pdf: https://www.alphaxiv.org/abs/2607.16090
     code: https://github.com/hanyang-chen/DADiff-release
     blog: /blogs/dadiff
     bibtex: |
       @article{chen2026dadiff,
         title={DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning},
         author={Chen, Hanyang and Satheesh, Anirudh and Da, Longchao and Wei, Hua},
-        journal={arXiv preprint arXiv:2605.28603},
+        journal={arXiv preprint arXiv:2607.16090},
         year={2026}
       }
     image: /assets/pub/img/dadiff.jpg
