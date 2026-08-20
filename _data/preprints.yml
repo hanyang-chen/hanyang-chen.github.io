@@ -16,3 +16,19 @@ main:
         year={2026}
       }
     image: /assets/pub/img/mpca.jpg
+
+  - key: gui
+    title: "AndroidReality: How Far Are Mobile Agents from the Real World?"
+    authors: Xiaoou Liu, Longchao Da, <strong>Hanyang Chen</strong>, Yuan Ling, Hua Wei
+    conference_short: arXiv
+    conference: arXiv:2608.07775, 2026.
+    year: 2026
+    pdf: https://www.alphaxiv.org/abs/2608.07775
+    bibtex: |
+      @article{liu2026androidreality,
+        title={AndroidReality: How Far Are Mobile Agents from the Real World?},
+        author={Liu, Xiaoou and Da, Longchao and Chen, Hanyang and Ling, Yuan and Wei, Hua},
+        journal={arXiv preprint arXiv:2608.07775},
+        year={2026}
+      }
+    image: /assets/pub/img/gui.png

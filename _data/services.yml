@@ -1,4 +1,8 @@
 reviewers:
+  - name: "Annual AAAI Conference on Artificial Intelligence (AAAI)"
+    url: "https://aaai.org/conference/aaai/aaai-27/"
+    year: "2027"
+
   - name: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)"
     url: "https://kdd2026.kdd.org/"
     year: "2026-2027"
