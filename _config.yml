@@ -1,7 +1,7 @@
 # Basic Information 
 title: Hanyang Chen
 subtitle: （陈晗阳）
-position: Incoming Ph.D. Student
+position: Ph.D. Student
 affiliation: Arizona State University
 # affiliation_link: https://www.asu.edu/
 email: hanyang [at] asu.edu
@@ -10,7 +10,7 @@ email: hanyang [at] asu.edu
 url: https://hanyang-chen.github.io
 baseurl: ""
 keywords: hanyang chen, chen hanyang, hanyangchen, chenhanyang, 陈晗阳
-description: Hanyang Chen is an incoming Ph.D. student at the Arizona State University. His research lies in reinforcement learning, data mining, and large language models.
+description: Hanyang Chen is a Ph.D. student at the Arizona State University. His research lies in reinforcement learning, data mining, and large language models.
 
 # The option is used to show the last update time.
 enable_last_update: false
