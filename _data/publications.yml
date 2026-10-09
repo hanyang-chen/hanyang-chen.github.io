@@ -1,4 +1,52 @@
 main:
+  - key: gui
+    title: "AndroidReality: How Far Are Mobile Agents from the Real World?"
+    authors: Xiaoou Liu, Longchao Da, <strong>Hanyang Chen</strong>, Yuan Ling, Hua Wei
+    conference_short: arXiv
+    conference: arXiv:2608.07775, 2026.
+    year: 2026
+    pdf: https://www.alphaxiv.org/abs/2608.07775
+    bibtex: |
+      @article{liu2026androidreality,
+        title={AndroidReality: How Far Are Mobile Agents from the Real World?},
+        author={Liu, Xiaoou and Da, Longchao and Chen, Hanyang and Ling, Yuan and Wei, Hua},
+        journal={arXiv preprint arXiv:2608.07775},
+        year={2026}
+      }
+    image: /assets/pub/img/gui.png
+
+  - key: one-prompt-does-not-fit-all
+    title: "One Prompt Does Not Fit All: Self-Meta-Evolve for Personalized Information Extraction"
+    authors: Hongliang Li, Lu Wang, Yong Xu, <strong>Hanyang Chen</strong>, Zhitao Hou, Xiaoting Qin, Song Ge, Qingwei Lin, Dongmei Zhang
+    conference_short: AACL-IJCNLP 2026
+    conference: The 5th Asia-Pacific Chapter of the Association for Computational Linguistics & the 15th International Joint Conference on Natural Language Processing <strong>(AACL-IJCNLP)</strong>, 2026.
+    year: 2026
+    pdf: https://www.alphaxiv.org/abs/2609.21626
+    bibtex: |
+      @article{li2026one,
+        title={One Prompt Does Not Fit All: Self-Meta-Evolve for Personalized Information Extraction},
+        author={Li, Hongliang and Wang, Lu and Xu, Yong and Chen, Hanyang and Hou, Zhitao and Qin, Xiaoting and Ge, Song and Lin, Qingwei and Zhang, Dongmei},
+        journal={arXiv preprint arXiv:2609.21626},
+        year={2026}
+      }
+    image: /assets/pub/img/one-prompt-does-not-fit-all.png
+
+  - key: diverse-reasoning-paths
+    title: Diverse Reasoning Paths Matter: Symbolic Equivalence Augmentation for Enhancing RL Exploration
+    authors: Xiaoou Liu, Tiejin Chen, <strong>Hanyang Chen</strong>, Yuan Ling, Hua Wei
+    conference_short: AACL-IJCNLP 2026
+    conference: The 5th Asia-Pacific Chapter of the Association for Computational Linguistics & the 15th International Joint Conference on Natural Language Processing <strong>(AACL-IJCNLP)</strong>, 2026.
+    year: 2026
+    # pdf: https://www.alphaxiv.org/abs/2609.21626
+    # bibtex: |
+    #   @article{liu2026diverse,
+    #     title={Diverse Reasoning Paths Matter: Symbolic Equivalence Augmentation for Enhancing RL Exploration},
+    #     author={Liu, Xiaoou and Chen, Tiejin and Chen, Hanyang and Ling, Yuan and Wei, Hua},
+    #     journal={arXiv preprint arXiv:2609.21626},
+    #     year={2026}
+    #   }
+    image: /assets/pub/img/diverse-reasoning-paths.png
+
   - key: dadiff
     title: "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning"
     authors: <strong>Hanyang Chen</strong>, Anirudh Satheesh, Longchao Da, Hua Wei
