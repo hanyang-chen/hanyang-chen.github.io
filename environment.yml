@@ -1,0 +1,10 @@
+name: local-jekyll
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - ruby=3.3
+  - c-compiler
+  - cxx-compiler
+  - make
+  - pkg-config

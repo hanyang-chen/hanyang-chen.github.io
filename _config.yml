@@ -56,6 +56,11 @@ exclude:
   - README.md
   - LICENSE
   - CNAME
+  - .tools
+  - .bundle
+  - environment.yml
+  - scripts
+  - vendor
 
 # Plugins
 plugins:

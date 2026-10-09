@@ -8,16 +8,46 @@ For more details, please refer to this repository: <https://github.com/yaoyao-li
 
 ### Using Locally with Jekyll
 
-You need to install [Ruby](https://www.ruby-lang.org/en/) and [Jekyll](https://jekyllrb.com/) first.
+This repository supports a project-local Ruby 3.3 environment on WSL/Linux.
+Miniconda or Miniforge is required for the initial setup. The environment is
+accessed through `.tools/runtime/`; no system-wide Ruby installation is needed.
+On case-insensitive Windows mounts, this directory links to a project-specific
+environment under `~/.local/share/jekyll-envs/` in the WSL Linux filesystem,
+so Linux compiler headers retain their distinct uppercase/lowercase filenames.
 
-Install and run:
+First-time setup (requires internet access):
 
 ```bash
-bundle install
-bundle exec jekyll server
+bash scripts/setup.sh
 ```
-View the live page using `localhost`:
-<http://localhost:4000>. You can get the html files in the `_site` folder.
+
+Start the local preview:
+
+```bash
+bash scripts/serve.sh
+```
+
+Open <http://localhost:4000>. Changes are detected using polling so edits from
+Windows editors work on WSL-mounted folders. Press Ctrl+C to stop the server.
+To use another port, run `bash scripts/serve.sh --port 4001`.
+
+Build the site without starting a server:
+
+```bash
+bash scripts/build.sh
+```
+
+Generated HTML is written to `_site/`. To run Ruby/Bundler commands directly
+in your current Bash terminal:
+
+```bash
+source scripts/env.sh
+bundle exec jekyll doctor
+```
+
+The environment is declared in `environment.yml`. `.tools/` and `.bundle/`
+contain local dependencies/settings and are ignored by Git.
+The Google Scholar crawler is separate and is not required to preview the site.
 
 ### Using the HTML version
 

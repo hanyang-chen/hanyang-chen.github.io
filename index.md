@@ -46,6 +46,8 @@ I pursued my master’s study at Beijing Jiaotong University (BJTU), where I was
 I am also fortunate to have the opportunity to work with Prof. [Songhe Feng](https://faculty.bjtu.edu.cn/8407/), Prof. [Kaiyu Huang](https://faculty.bjtu.edu.cn/10144/), [Xiaowei Mao](https://scholar.google.com/citations?user=TPjwuDMAAAAJ&hl=zh-CN), and other excellent researchers during my master’s study. 
 My main research interests include reinforcement learning, data mining, and large language models.
 
+> **I am currently seeking internship opportunities for Summer 2027. Please feel free to contact me if you have any openings!**
+
 <div id="mario-fan">
   <p style="margin: 10px 0 0;">
     🍄 Beyond research, I'm a <strong>Nintendo</strong> fan as well! I especially love the
