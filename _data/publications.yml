@@ -37,12 +37,12 @@ main:
     conference_short: AACL-IJCNLP 2026
     conference: The 5th Asia-Pacific Chapter of the Association for Computational Linguistics & the 15th International Joint Conference on Natural Language Processing <strong>(AACL-IJCNLP)</strong>, 2026.
     year: 2026
-    # pdf: https://www.alphaxiv.org/abs/2609.21626
+    pdf: https://alphaxiv.org/abs/2610.22665
     bibtex: |
       @article{liu2026diverse,
         title={Diverse Reasoning Paths Matter: Symbolic Equivalence Augmentation for Enhancing RL Exploration},
         author={Liu, Xiaoou and Chen, Tiejin and Chen, Hanyang and Ling, Yuan and Wei, Hua},
-        journal={arXiv preprint arXiv:2609.21626},
+        journal={arXiv preprint arXiv:2610.22665},
         year={2026}
       }
     image: /assets/pub/img/diverse-reasoning-paths.png
