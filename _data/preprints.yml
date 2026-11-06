@@ -1,6 +1,22 @@
 main:
 
   - key: mvla
+    title: "Steering the Teacher: Improving On-Policy Self-Distillation for Thinking Models"
+    authors: Tiejin Chen, Xiaoou Liu, <strong>Hanyang Chen</strong>, Hua Wei
+    conference_short: arXiv
+    conference: arXiv:2610.34005, 2026.
+    year: 2026
+    pdf: https://www.alphaxiv.org/abs/2610.34005
+    bibtex: |
+      @article{chen2026steering,
+        title={Steering the Teacher: Improving On-Policy Self-Distillation for Thinking Models},
+        author={Chen, Tiejin and Liu, Xiaoou and Chen, Hanyang and Wei, Hua},
+        journal={arXiv preprint arXiv:2610.34005},
+        year={2026}
+      }
+    image: /assets/pub/img/sv-opd.jpg
+
+  - key: mvla
     title: "Beyond English: Uncovering the Multilingual Gap in Vision-Language-Action Models"
     authors: <strong>Hanyang Chen</strong>, Hongliang Li, Jiarui Cao, Yang Li, Yang Jiang, Haonan Wen, Kaiyu Huang, Shengnan Guo, Huaiyu Wan
     conference_short: arXiv
