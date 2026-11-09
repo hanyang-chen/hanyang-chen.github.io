@@ -1,6 +1,6 @@
 main:
 
-  - key: mvla
+  - key: sv-training
     title: "Steering the Teacher: Improving On-Policy Self-Distillation for Thinking Models"
     authors: Tiejin Chen, Xiaoou Liu, <strong>Hanyang Chen</strong>, Hua Wei
     conference_short: arXiv
