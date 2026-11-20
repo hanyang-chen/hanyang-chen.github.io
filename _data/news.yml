@@ -1,6 +1,9 @@
 items:
+  - date: "2026-11-20"
+    content: 'One paper is accepted by IEEE TMC!'
+
   - date: "2026-09-24"
-    content: 'One paper is accepted by NeurIPS 2026!'
+    content: 'Our paper: "<a href="https://www.alphaxiv.org/abs/2608.07775">AndroidReality: How Far Are Mobile Agents from the Real World?</a>" is accepted by NeurIPS 2026!'
 
   - date: "2026-09-08"
     content: 'Two papers are accepted by AACL-IJCNLP 2026!'
