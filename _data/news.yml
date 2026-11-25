@@ -1,6 +1,6 @@
 items:
   - date: "2026-11-20"
-    content: 'One paper is accepted by IEEE TMC!'
+    content: 'Our paper: "<a href="https://ieeexplore.ieee.org/document/11812642">DRRLight: Dual Residual-Guided Reinforcement Learning for Phase-Duration Joint Traffic Signal Control</a>" is accepted by IEEE TMC!'
 
   - date: "2026-09-24"
     content: 'Our paper: "<a href="https://www.alphaxiv.org/abs/2608.07775">AndroidReality: How Far Are Mobile Agents from the Real World?</a>" is accepted by NeurIPS 2026!'
